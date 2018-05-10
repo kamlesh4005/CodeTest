@@ -1,0 +1,17 @@
+<!-- <div class="content">
+    <h2 *ngIf="carDetail.name">{{carDetail.name}}</h2>
+    <img *ngIf="carDetail.imageUrl.length > 0" [src]="carDetail.imageUrl">
+    <p *ngIf="carDetail.description.length > 0" >{{carDetail.description}} </p>
+  </div> -->
+
+<div class="form-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title" *ngIf="carDetail.name">{{carDetail.name}}</h3>
+    </div>
+    <div class="panel-body">
+      <img *ngIf="carDetail.imageUrl.length > 0" [src]="carDetail.imageUrl" height="400" width="550">
+      <p *ngIf="carDetail.description.length > 0" >{{carDetail.description}} </p>
+    </div>
+  </div>
+</div>

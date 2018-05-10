@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
+    <h1>Car List !</h1>
+    <div class="row form-group">
+      <div class="">
+        {{brandErrorMsg}}
+        <select class="form-control" (change)="firstDropDownChanged($event.target.value)">
+          <option value="" disabled>Select</option>
+          <option *ngFor='let brand of brands' [value]="brand._id">{{ brand.name }}</option>
+        </select> <br>
+        {{modelErrorMsg}}
+        <select class="form-control" *ngIf="carModels.length>0" (change)="secondDropDownChanged($event.target.value)">
+          <option value="" disabled>Select</option>
+          <option *ngFor='let carModel of carModels' [value]="carModel._id">{{ carModel.name }}</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <app-car-detail *ngIf="currentCar" [carDetail]="currentCar"></app-car-detail>
+    <router-outlet></router-outlet>    
+  </div>
+</div>
+  
