@@ -11,8 +11,8 @@ export class AppComponent implements OnInit {
   currentCar: any;
   brands: any[] = [];
   carModels: any[] =  [];
-  public brandErrorMsg;
-  public modelErrorMsg;
+  public brandErrorMsg = "";
+  public modelErrorMsg = "";
 
   constructor(private appService: AppService){}
 

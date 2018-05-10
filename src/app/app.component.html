@@ -4,12 +4,16 @@
     <h1>Car List !</h1>
     <div class="row form-group">
       <div class="">
-        {{brandErrorMsg}}
+        <div *ngIf="brandErrorMsg.length>0" class="alert alert-danger">
+          {{brandErrorMsg}}
+        </div>
         <select class="form-control" (change)="firstDropDownChanged($event.target.value)">
           <option value="" disabled>Select</option>
           <option *ngFor='let brand of brands' [value]="brand._id">{{ brand.name }}</option>
         </select> <br>
-        {{modelErrorMsg}}
+        <div *ngIf="modelErrorMsg.length>0" class="alert alert-danger">
+          {{modelErrorMsg}}
+        </div>
         <select class="form-control" *ngIf="carModels.length>0" (change)="secondDropDownChanged($event.target.value)">
           <option value="" disabled>Select</option>
           <option *ngFor='let carModel of carModels' [value]="carModel._id">{{ carModel.name }}</option>

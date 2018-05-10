@@ -1,12 +1,9 @@
-# Test this Code - 
-
-1. Clone this repo.
-2. >npm install   - To install the dependencies.
-3. >ng build   - To build the Angular Code.
-4. >node server  -   To Run the Application.
-
+# Test this Code -
+1. > Clone this repo.
+2. > npm install - To install the dependencies.
+3. > ng build - To build the Angular Code.
+4. > node server - To Run the Application.
 Please Refer Result Folder for Screenshots of this Application.
-
 
 # CodeTest
 
